@@ -1,14 +1,14 @@
 class BooksController < ApplicationController
-  
+
   def new
-     @book = Books.new
+     @book = Book.new
   end
 
   def create
-    @book = Books.new(books_params)
-    @book = books.id
+    @book = Book.all
+    @book = book.(books_params)
     @book.save
-    redirect_to books_path
+    redirect_to book_path(@book)
   end
 
   def index
@@ -18,5 +18,10 @@ class BooksController < ApplicationController
   end
 
   def destroy
+  end
+  private
+
+  def post_image_params
+    params.require(:book).permit(:title, :body)
   end
 end
