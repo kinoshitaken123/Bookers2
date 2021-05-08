@@ -12,16 +12,16 @@ class BooksController < ApplicationController
   end
 
   def edit
-  	@book = Book.find(params[:id])
+  # 	@book = Book.find(params[:id])
   end
 
   def index
-    @book = Book.all
+    # @book = Book.all
   end
 
-  def show
-   	@book = Book.find(params[:id])
-  end
+  # # def show
+  # # 	@book = Book.find(params[:id])
+  # end
 
   def destroy
   end
