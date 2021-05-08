@@ -1,32 +1,17 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Bookers</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+ <body class="header">
+    <header class="navbar navbar-fixed-top navbar-inverse">
+      <div class="container">
+        <nav class="nav navbar-left">
+            <span class="title">Bookers</span>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
 
-  <body>
-    <% if user_signed_in? %>
+      <%= yield %>
 
-      <li>
-       <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
-      </li>
-     <% else %>
-      <li>
-       S<%= link_to 'マイページ', user_path(current_user.id) %>
-      </li>
-      <li>
-        <%= link_to "新規登録", new_user_registration_path %>
-      </li>
-      <li>
-        <%= link_to "ログイン", new_user_session_path %>
-      </li>
-    <% end %>
 
-    <%= yield %>
+        <footer>
+          <p class="text-right"> CopyRight Infratop.inc</p>
+        </footer>
+      </div>
+    </div>
   </body>
 </html>
