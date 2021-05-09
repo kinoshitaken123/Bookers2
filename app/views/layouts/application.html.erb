@@ -44,11 +44,11 @@
               <span class=> Home</span>
             <% end %>
             </li>
-            <!--<li>-->
-            <!--%= link_to about_path do %>-->
-            <!--  <span class="glyphicon glyphicon-link about" aria-hidden="true"> About</span>-->
-            <!--% end %>-->
-            <!--</li>-->
+            <li>
+            <%= link_to home_about_path do %>
+              <span> About</span>
+            <% end %>
+            </li>
             <li>
             <%= link_to new_user_registration_path do %>
               <span> sign up</span>
@@ -70,7 +70,7 @@
           <%= yield %>
           </div>
           <div class="row">
-            <div class="col-xs-3 col-xs-offset-9"><p>CpoyRight Infratop.inc</p></div>
+            <div><p>CpoyRight Infratop.inc</p></div>
           </div>
         </div>
       </div>
